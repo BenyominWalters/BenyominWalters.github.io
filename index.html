@@ -6,22 +6,46 @@
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <meta name="description" content="Benyomin Walters home page">
        <meta name="author" content="Benyomin Walters">
+       <link rel="stylesheet" type="text/css" href="dist/css/main.css">
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <header>
+            <span class="logo">My Website</span>
+            <a id="toggleMenu">Menu</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
         <h1>Hello, I am Benyomin Walters</h1>
+        
         <p>
-            <img style="border-radius: 50%; float: left; margin-left: 1em;" src="https://s.gravatar.com/avatar/d28b1ffec0ab2fd3fba96b0723e22862?s=200" alt="Benyomin Walters">
+            <img class="avatar" src="https://s.gravatar.com/avatar/d28b1ffec0ab2fd3fba96b0723e22862?s=200" alt="Benyomin Walters">
 
             I always had a knack for technology and a love of science and math. After teaching and working in curriculum development, were I also taught technology and was responsible for IT, I decided to learn to code. I taught myself python, and then joined a coding boot camp, where I learned full stack web and app development, including a MEAN stack. I love building things and finding creative solutions. Now I'm a freelance web and mobile app developer, and I get to put these passions into practice.
         </p>
+        </main>
         
+        <script>
+
+                var toggleMenu = document.getElementById('toggleMenu');
+                var nav = document.querySelector('nav');
+                toggleMenu.addEventListener(
+                  'click',
+                  function(){
+                    if(nav.style.display=='block'){
+                      nav.style.display='none';
+                    }else{
+                      nav.style.display='block';
+                    }
+                  }
+                );
+              </script>
 
     </body>
 </html>
